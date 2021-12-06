@@ -3,7 +3,9 @@ import React from 'react';
 function AllTheThings(props) {
   const products = props.products.map((ele, index) =>{
     return(
-      <li onClick={props.addToCart(ele)}>
+      <li onClick={() => {props.addToCart(ele)}}
+      key = {index}
+      >
         {ele.name}{ele.price}
       </li>
     )
