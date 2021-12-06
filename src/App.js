@@ -18,7 +18,7 @@ export default function App() {
 
 	// create an addToCart function that takes in a product as a param
 	const addToCart = (product) => {
-		return setCart(...product)
+	  setCart([...cart, product])
 	}
 	// using the ...spread operator add the product to the cart array
 
@@ -26,7 +26,7 @@ export default function App() {
 	// using Array.filter remove create a new array where that item is removed
 
 	const removeFromCart = (index) => {
-		return setCart(cart.filter((product) => !!cart[index]))
+		 setCart(cart.filter((product) => !!cart[index]))
 	}
 
 	return (
@@ -34,7 +34,7 @@ export default function App() {
 			<h1>Big Time Shopping</h1>
 			<Form />
 			<div className='products'>
-				<AllTheThings products={products} />
+				<AllTheThings products={products} addToCart={addToCart} />
 				<MyShoppingCart cart={cart} />
 			</div>
 		</div>
