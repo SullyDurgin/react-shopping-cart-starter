@@ -35,7 +35,7 @@ export default function App() {
 			<Form />
 			<div className='products'>
 				<AllTheThings products={products} />
-				<MyShoppingCart />
+				<MyShoppingCart cart={cart} />
 			</div>
 		</div>
 	)
